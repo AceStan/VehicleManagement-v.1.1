@@ -1,0 +1,35 @@
+<div>
+</br>
+<table>
+  <tr>
+    <th>Id number</th>
+    <th>Car Type</th>
+    <th>Car Model</th>
+    <th>Engine</th>
+    <th>Last Service</th>
+    <th>Fuel Consumption</th>
+    <th>Delete car</th>
+    <th></th>
+    <th>Kilometars
+      <br/> passed today</th>
+    </tr>
+    <tr ng-repeat="car in $ctrl.value.user.cars track by car.id">
+      <td>{{car.id}}</td>
+      <td>{{car.brand}}</td>
+      <td>{{car.model}}</td>
+      <td>{{car.engine}} hp</td>
+      <td>{{car.lastService | date}}</td>
+      <td>{{car.fuelCompsumption | number:2}} liters/100km</td>
+      <td>
+        <button data="{{car}}" ng-click=$ctrl.value.deleteCar(car)>X</button>
+      </td>
+      <td>
+        <button data="{{car}}" ng-click=$ctrl.value.editCar(car)>Edit Car</button>
+      </td>
+      <td>
+        <input type="text" size="10" ng-model=car.km> Kilometars
+        <button ng-click=$ctrl.value.addTrip(car)>Add </button>
+      </td>
+    </tr>
+  </table>
+</div>

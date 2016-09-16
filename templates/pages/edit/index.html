@@ -1,0 +1,28 @@
+<button ng-click="vm.carBack()">Back</button>
+<br/>
+<div>
+    <form name="addCarForm" class="basic-grey" novalidate >
+    <h1>Edit the informations about this car
+    </h1>
+    <label>
+        <div>Change the power of the engine :</div>
+        <input type="text" placeholder="Enter Engine's Power in HP" ng-model = "vm.carToAdd.engine"  required/>
+    </label>
+    <br/>
+    <label>
+        <div>Last Service :</div>
+        <input type="text" placeholder="When was the last service of this car ?" ng-model = "vm.carToAdd.lastService" required/>
+    </label> 
+    <br/>
+    <label>
+        <div>Average Fuel Consumption :</div>
+        <input type="text" placeholder="Enter The average fuel consupmtion"  ng-model = "vm.carToAdd.fuelCompsumption" required/>
+    </label>
+    <br/>
+    <label>
+        <div>&nbsp;</div> 
+        <button type ="submit"  ng-click = vm.updateCarInfo(vm.carToAdd)>Update</button>
+    </label>   
+
+</form>
+</div>

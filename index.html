@@ -1,0 +1,53 @@
+<html ng-app = "VehicleManagement">
+<head>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+<script src="/javascript/app.js"></script>
+<script src="/javascript/services/authentication.js"></script>
+<script src="/javascript/services/cars.js"></script>
+<script src="/javascript/services/search.js"></script>
+<script src="/javascript/components/search-results.component.js"></script>
+<script src="/javascript/components/cars.component.js"></script>
+<script src="/javascript/components/edit-users.component.js"></script>
+<script src="/javascript/components/stats.component.js"></script>
+<script src="/javascript/components/add-car.component.js"></script>
+<link rel="stylesheet" type="text/css" href="css/welcome.css">
+<link rel="stylesheet" type="text/css" href="css/form.css">
+<link rel="stylesheet" type="text/css" href="css/table.css">
+<link rel="stylesheet" type="text/css" href="css/search-bar.css">
+<link rel="stylesheet" type="text/css" href="css/icon.css">
+
+
+</head>
+<body ng-controller="VehicleManagementController as vm" bgcolor = "#10B9A0">
+<div ng-show = "vm.showWelcome">
+	<header><h1>WELCOME</h1></header>
+	<div>
+		<form name="signInForm" ng-submit="signInForm.$valid && vm.onSignInClicked()" class="basic-grey" novalidate>
+			<h1>Sign In
+				<span>Enter you UserName and Password</span>
+			</h1>
+			<label>
+				<div>UserName :</div>
+				<input type="text" placeholder="Enter Username"  ng-model = "vm.signInUser.username" required/>
+			</label>
+			<br/>
+			<label>
+				<div>Password :</div>
+				<input type="password" placeholder="Enter Password"  ng-model = "vm.signInUser.password" required/>
+			</label>   
+			<br/>
+			<label>
+				<div>&nbsp;</div> 
+				<button type="submit">Sign In</button>
+				<button type ="button" ng-click = "vm.onClickSignUp()">Sign Up</button>
+
+			</label>     
+		</form>
+	</div>
+</div>
+<div ng-view ng-show = "vm.showWelcome == false"></div>
+</body>
+</html>

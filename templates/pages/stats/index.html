@@ -1,0 +1,21 @@
+   <div>
+            <table>
+                <tr>
+                    <th>Id number</th>
+                    <th>Car Type</th>
+                    <th>Car Model</th>
+                    <th>Service required</th>
+                </tr>
+                <tr ng-repeat="car in $ctrl.value track by car.id">
+                    <td>{{car.id}}</td>
+                    <td>{{car.brand}}</td>
+                    <td>{{car.model}}</td>
+                    <td>
+                        <p ng-show="car.km < 10000">NO</p>
+                        <p ng-show="car.km >= 10000">YES</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <center>
+ <div >

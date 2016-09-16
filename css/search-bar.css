@@ -1,0 +1,19 @@
+.search-bar{
+	height: 30px;
+	line-height: 30px;
+	vertical-align: middle;
+}
+.search-bar > *{
+	height: 30px;
+	float: left;
+	margin-right: 5px;
+}
+.search-bar{
+	color:white;
+}
+.search-bar i{
+	color:gray;
+}
+.search-bar i:hover{
+	color:black;
+}

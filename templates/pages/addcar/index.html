@@ -1,0 +1,47 @@
+<div>
+</br>
+<form name="addCarForm" class="basic-grey" novalidate>
+    <h1>Add Car
+        <span>Please fill all the texts in the fields.</span>
+    </h1>
+    <label>
+        <div>Unique ID:</div>
+        <input type="text" placeholder="Enter Unique Car Identification Number" ng-model="$ctrl.value.carToAdd.id" required/>
+    </label>
+    <br/>
+    <label>
+        <div>Car Type:</div>
+        <input type="text" placeholder="Enter Car Brand" ng-model="$ctrl.value.carToAdd.brand" required/>
+    </label>
+    <br/>
+    <label>
+        <div>Car Model:</div>
+        <input type="text" placeholder="Enter Car Model" ng-model="$ctrl.value.carToAdd.model" required/>
+    </label>
+    <br/>
+    <label>
+        <div>Engine :</div>
+        <input type="text" placeholder="Enter Engine's Power in HP" ng-model="$ctrl.value.carToAdd.engine" required/>
+    </label>
+    <br/>
+    <label>
+        <div>Last Service :</div>
+        <input type="text" placeholder="When was the last service of this car ?" ng-model="$ctrl.value.carToAdd.lastService" required/>
+    </label>
+    <br/>
+    <label>
+        <div>Kilometars passed from last service:</div>
+        <input type="text" placeholder="If the car isn't new, enter the passed kilometars from the last service" ng-model="$ctrl.value.carToAdd.km" required/>
+    </label>
+    <br/>
+    <label>
+        <div>Average Fuel Consumption :</div>
+        <input type="text" placeholder="Enter The average fuel consupmtion" ng-model="$ctrl.value.carToAdd.fuelCompsumption" required/>
+    </label>
+    <br/>
+    <label>
+        <div>&nbsp;</div>
+        <button type="submit" ng-click="$ctrl.value.addCar()">Add</button>
+    </label>
+</form>
+</div>

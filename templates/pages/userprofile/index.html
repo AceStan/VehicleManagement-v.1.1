@@ -1,0 +1,27 @@
+<div>
+    <br/>
+    <div>
+        <button style="position:absolute;top:20px;right:20px;" ng-click="vm.logOut()">Log Out</button>
+        <div class="search-bar" style="position:absolute;top 20px; right:150px">
+            <label>List of all cars and their owners :</label><a target="_blank" href="files/OwnersPdf.pdf"><i class = "fa fa-file-pdf-o fa-2x" aria-hidden = "true"></i></a>
+            <span>|</span>
+            <label>Search:</label>
+            <input type="search" placeholder = "Search Cars" ng-model = "vm.searchContent">
+            <i ng-click = "vm.searchCars()" class="fa fa-search fa-2x " aria-hidden="true"></i>
+        </div>
+        <h2 style="color:white;position:absolute;top:20px;left:20px;">User: {{vm.user.name}} {{vm.user.lastName}}</h2>
+        <h2 style="color:white;position:absolute;top:50px;left:20px;">Role: {{vm.user.role}}</h2>
+        </br></br></br></br>
+        <center>
+            <div>
+                <button ng-click="vm.onCarsClicked()">Cars</button>
+                <button ng-click="vm.onMngCarsClicked()">Add Car</button>
+                <button ng-click="vm.onStatsClicked()">Statistics</button>
+                <button ng-show="vm.user.role === 'admin'" ng-click="vm.editUsers()">Edit Users</button>
+            </div>
+        </center>
+<list-cars value = "vm" ng-show = "vm.showCars"></list-cars>
+<add-car  value = "vm" ng-show="vm.showAddCar"></add-car>      
+<list-stats value = "vm.user.cars" ng-show = "vm.showStats"></list-stats>
+<search-results value = "vm" ng-show = "vm.showResults"></search-results> 
+<edit-users value = "vm" ng-show = "vm.showEditUsers"></edit-users>

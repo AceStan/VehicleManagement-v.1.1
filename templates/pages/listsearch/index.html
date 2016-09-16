@@ -1,0 +1,30 @@
+<div><br/></div>
+
+
+<header><h1>Search results :</h1></header>
+<header>
+  <table>
+   <tr>
+    <th>Id number</th>
+    <th>Car Type</th>
+    <th>Car Model</th>
+    <th>Engine</th>
+    <th>Last Service</th>
+    <th>Fuel Consumption</th>
+    <th>Owner</th>
+    <th ng-show = "$ctrl.value.user.role === 'admin'">Delete Car</th>
+    <th>Car <br> Documentation</<th colspan="" rowspan="" headers="" scope=""></th>
+  </tr>
+  <tr ng-repeat = "car in $ctrl.value.searchResult track by car.id">
+    <td>{{car.id}}</td>
+    <td>{{car.brand}}</td>
+    <td>{{car.model}}</td>
+    <td>{{car.engine}} hp</td>
+    <td>{{car.lastService | date}}</td>
+    <td>{{car.fuelCompsumption | number:2}}  liters/100km</td>
+    <td><button ng-click = $ctrl.getOwner(car.fk)>See the owner</button></td>
+    <td  ng-show = "$ctrl.value.user.role === 'admin'"><button ng-click = $ctrl.value.adminDeleteCar(car)>X</button></td>
+    <td><a target = "_blank" href="files/CarDocumentation.pdf"></a><div class = "search-bar"><i class="fa fa-file-pdf-o fa-2x" aria-hidden = "true" ng-click=$ctrl.carDocumentation(car)></i><div></td>
+  </tr>
+</table>
+</header>

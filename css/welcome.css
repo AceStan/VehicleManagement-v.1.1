@@ -1,0 +1,51 @@
+div.container {
+    width: 100%;
+    border: 1px solid gray;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color:#10B9A0;
+    clear: left;
+    text-align: center;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
+}
+button {
+  background: #0cad98;
+  background-image: -webkit-linear-gradient(top, #0cad98, #045c85);
+  background-image: -moz-linear-gradient(top, #0cad98, #045c85);
+  background-image: -ms-linear-gradient(top, #0cad98, #045c85);
+  background-image: -o-linear-gradient(top, #0cad98, #045c85);
+  background-image: linear-gradient(to bottom, #0cad98, #045c85);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 8px 20px 10px 20px;
+  text-decoration: none;
+}

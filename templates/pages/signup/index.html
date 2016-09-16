@@ -1,0 +1,55 @@
+<button ng-click = "vm.BackClicked()">Back</button>  
+
+<div >
+
+	<form name="signUpForm" ng-submit="signUpForm.$valid && vm.onSignUpClicked()" class="basic-grey" novalidate>
+    <h1>User Form 
+        <span>Please fill all the texts in the fields.</span>
+    </h1>
+    <label>
+        <div>Name :</div>
+        <input type="text" ng-model="vm.user.name" placeholder="Your Full Name"  required />
+    </label>
+	<br/>
+    <label>
+        <div>Last Name:</div>
+        <input type="text"  ng-model="vm.user.lastName" placeholder="Your Last Name" required/>
+    </label>
+    <br/>
+    <label>
+        <div>Mobile :</div>
+        <input type="text"   ng-model="vm.user.mobile" placeholder="Mobile Phone Number" required/>
+    </label>
+     <br/>
+    <label>
+        <div>SSID :</div>
+        <input type="text"   ng-model="vm.user.ssid" placeholder="Your SSID" required/>
+    </label>
+    <br/>
+    <label>
+        <div>Email :</div>
+        <input type="email"  ng-model="vm.user.email" placeholder="Valid Email Address" required/>
+    </label> 
+    <br/>
+    <label>
+        <div>UserName :</div>
+        <input type="text" placeholder="Enter Username"  ng-model = "vm.user.username" required/>
+    </label>
+    <br/>
+    <label>
+        <div>Password :</div>
+        <input type="password" placeholder="Enter Password" ng-model = "vm.user.password" required/>
+    </label>    
+    <br/>
+    <label>
+        <div>Role:</div>
+        <input type="text" placeholder = "Default: User (Edit Credentials) - Only admin can change it" ng-readonly ="true" ng-model = "vm.user.role" />
+    </label>    
+    <br/>
+    <label>
+        <div>&nbsp;</div> 
+        <button type="submit" >Sign Up</button>
+    </label> 
+
+</form>
+</div>
